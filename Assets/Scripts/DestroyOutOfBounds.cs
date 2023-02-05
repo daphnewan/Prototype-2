@@ -15,10 +15,13 @@ private float lowerBound=-10;
     // Update is called once per frame
     void Update()
     {
+//If an object goes past the players view in game, remove that object 
        if(transform.position.z>30)
 {
 Destroy(gameObject);
-} else if (transform.position.z<lowerBound){
+} else if (transform.position.z<lowerBound)
+{
+Debug.Log("Game Over!");
 Destroy(gameObject);
 }
     }
